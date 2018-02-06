@@ -1,0 +1,13 @@
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Test3]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[Test3](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[data] [date] NULL
+) ON [PRIMARY]
+END
+GO
